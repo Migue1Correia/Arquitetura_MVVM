@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp1.MainPage"
+             Title="Exemple de MVVM - Cumprimento do Usuario " >
+
+
+    <!--Definindo o Layout da pagina Com espassamento Preenchido -->
+    
+    <VerticalStackLayout Padding="24" Spacing="16">
+
+        <!-- Definindo o Rotulo com Texto em Negrito -->
+
+        <Label Text="Digite Seu Nome " FontAttributes="Bold"/>
+
+        <!-- Campo de Entrada de texto que Liga o Binding ao nome da ViewModel.cs -->
+
+        <Entry Placeholder="EX. : Miguel " Text="{Binding Nome}"/>
+        
+        <!-- O Button Chama O Comand da ViewModel-->
+
+        <Button Text =" Cumprimentar " Command ="{Binding CumprimentarCommand}"/>
+
+        <!-- Label Para Mostrar O resultado Atualizado Automaticamnete -->
+
+        <Label Text="{Binding Saudacao}" FontSize="20" FontAttributes="Bold"/>
+
+
+
+
+    </VerticalStackLayout>
+    
+</ContentPage>
